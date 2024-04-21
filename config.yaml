@@ -1,8 +1,9 @@
-kind: destination
+kind: source
 spec:
   name: mysql
   path: cloudquery/mysql
-  registry: cloudquery
-  version: "v2.8.2"
+  version: v5.0.5
+  write_mode: overwrite-delete-stale
+  migrate_mode: safe
   spec:
-    connection_string: "host=127.0.0.1;port=7777;user=root;password=cve;dbname=cvedatabase"
+    connection_string: sql5700808:Gjw3Kc8QK2@tcp(sql5.freemysqlhosting.net:3306)/sql5700808

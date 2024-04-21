@@ -2,3 +2,7 @@
 2024-04-19T18:45:23Z ERR exiting with error error="failed to read package.json: open dist\\package.json: The system cannot find the file specified." invocation-id=40e7b38b-7298-42a0-8fba-6d6b408d7ac8 module=cli
 2024-04-20T23:43:11Z ERR exiting with error error="failed to get auth token: authentication token expired: failed to refresh token: 400 Bad Request: {\n  \"error\": {\n    \"code\": 400,\n    \"message\": \"TOKEN_EXPIRED\",\n    \"status\": \"INVALID_ARGUMENT\"\n  }\n}\n. Hint: You may need to run `cloudquery login` or set CLOUDQUERY_API_KEY" invocation-id=12ecc949-484f-4783-9b3f-649e55064483 module=cli
 2024-04-20T23:44:08Z ERR exiting with error error="failed to read package.json: open dist\\package.json: The system cannot find the file specified." invocation-id=8ae1e0b4-8ece-4606-af38-8405f48cbc58 module=cli
+2024-04-21T18:44:50Z INF Loading spec(s) args=["config.yaml"] invocation-id=3fb8a9f1-c948-4cbf-b64e-6ea7c94ee018 module=cli
+2024-04-21T18:44:50Z ERR exiting with error error="failed to load spec(s) from config.yaml. Error: expecting at least one source" invocation-id=3fb8a9f1-c948-4cbf-b64e-6ea7c94ee018 module=cli
+2024-04-21T18:45:09Z INF Loading spec(s) args=["config.yaml"] invocation-id=67f10ba1-629a-4781-b1e7-d7155cbef255 module=cli
+2024-04-21T18:45:09Z ERR exiting with error error="failed to load spec(s) from config.yaml. Error: failed to unmarshal file config.yaml: failed to decode spec: json: unknown field \"migrate_mode\"" invocation-id=67f10ba1-629a-4781-b1e7-d7155cbef255 module=cli

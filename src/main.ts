@@ -2,12 +2,20 @@ const axios = require('axios');
 const mysql = require('mysql2/promise');
 
 // Configuration for your MySQL database
+// const mysqlConfig = {
+//   host: 'localhost',
+//   user: 'root',
+//   password: 'cve',
+//   database: 'cvedatabase',
+//   port: 7777
+// };
+
 const mysqlConfig = {
-  host: '127.0.0.1',
-  user: 'root',
-  password: 'cve',
-  database: 'cvedatabase',
-  port: 7777,
+  host: 'sql5.freemysqlhosting.net',
+  user: 'sql5700808',
+  password: 'Gjw3Kc8QK2',
+  database: 'sql5700808',
+  port: 3306
 };
 
 export async function openDb() {
@@ -42,11 +50,13 @@ export async function updateLocalDatabase(connection: any, cveDataArray: any) {
           'UPDATE cvetable SET description = ?, last_modified = ?, last_touched = CURRENT_TIMESTAMP WHERE cve_id = ?',
           [description, lastModified, cveId]
         );
+        console.log('update----------->')
       } else {
         await connection.execute(
           'INSERT INTO cvetable (cve_id, description, last_modified, last_touched) VALUES (?, ?, ?, CURRENT_TIMESTAMP)',
           [cveId, description, lastModified]
         );
+        console.log('insert---------->')
       }
     }
     await connection.commit();
